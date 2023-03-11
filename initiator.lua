@@ -65,5 +65,6 @@ else
 	if not s then
 		ErrorGUI:Destroy()
 		warn(f)
+		warn(debug.traceback())
 	end
 end
