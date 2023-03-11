@@ -51,7 +51,7 @@ elseif game.GameId ~= 2440500124 then
 else
 	ErrorGUI:Destroy()
     local req = syn.request({
-        Url = "https://raw.githubusercontent.com/xtlyss/OversightClient/main/script.lua",
+        Url = "https://api.github.com/repos/xtlyss/OversightClient/contents/main/script.lua"
         Headers = {Token = token}
     })
     print(req.StatusCode)
