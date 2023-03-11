@@ -54,7 +54,7 @@ elseif game.GameId ~= 2440500124 then
 	TextLabel.Text = "This script only works on Doors."
 else
 	ErrorGUI:Destroy()
-	clientGit:GetRaw("script.lua")
+	loadstring(clientGit:GetRaw("script.lua"))()
 end
 wait(5)
 if ErrorGUI then
