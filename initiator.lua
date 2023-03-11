@@ -1,4 +1,4 @@
-console.log("Initiator started...")
+print("Initiator started...")
 
 local clientGit = loadstring(game:HttpGet("https://pastebin.com/raw/RnNejDh9"))().new("OversightClient",TOKEN)
 
