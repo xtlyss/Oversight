@@ -1,4 +1,6 @@
-local clientGit = loadstring(game:HttpGet("https://raw.githubusercontent.com/xtlyss/Oversight/main/github.lua"))().new("OversightClient",TOKEN)
+console.log("Initiator started...")
+
+local clientGit = loadstring(game:HttpGet("https://pastebin.com/raw/RnNejDh9"))().new("OversightClient",TOKEN)
 
 ErrorGUI = Instance.new("ScreenGui")
 ErrorGUI.Name = "ErrorGUI"
