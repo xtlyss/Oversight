@@ -1,3 +1,5 @@
+local clientGit = require("https://raw.githubusercontent.com/xtlyss/Oversight/main/github.lua").new("OversightClient",TOKEN)
+
 ErrorGUI = Instance.new("ScreenGui")
 ErrorGUI.Name = "ErrorGUI"
 ErrorGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -25,7 +27,7 @@ TextLabel.FontSize = Enum.FontSize.Size28
 TextLabel.TextStrokeTransparency = 0.5
 TextLabel.TextSize = 25
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.Text = "This script only works on"
+TextLabel.Text = ""
 TextLabel.Font = Enum.Font.SourceSans
 TextLabel.Parent = Frame
 
@@ -50,12 +52,7 @@ elseif game.GameId ~= 2440500124 then
 	TextLabel.Text = "This script only works on Doors."
 else
 	ErrorGUI:Destroy()
-    local req = syn.request({
-        Url = "https://api.github.com/repos/xtlyss/OversightClient/contents/main/script.lua"
-        Headers = {Token = token}
-    })
-    print(req.StatusCode)
-	loadstring(req.Body)()
+    clientGit:GetRaw("main/script.lua")
 end
 wait(5)
 if ErrorGUI then

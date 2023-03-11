@@ -1,15 +1,31 @@
-local req = syn.request
+local http = game:GetService("HttpService")
 
-local Github = {
-    Repository = "",
-    Token = ""
-}
+local GitHub = {}
+GitHub.__index = GitHub
 
-function Github:GetRaw(dir)
-    return req({
-        Url = "https://api.github.com/repos/"..self.Repository.."/contents/"+dir,
-        Headers = {Token = self.Token}
-    })
+function GitHub:Decode(s)
+    return syn.crypt.base64.decode(s)
 end
 
-return Github
+function GitHub:GetRaw(dir,rawResponse)
+    local resp = syn.request({
+        Url = "https://api.github.com/repos/"..self.Repository.."/contents/"..dir,
+        Headers = {Authorization = "Bearer "..self.Token}
+    })
+    if rawResponse then
+        return resp
+    else
+        return self:Decode(http:JSONDecode(resp.Body).content)
+    end
+end
+
+function GitHub.new(repo,token)
+    local self = setmetatable({},GitHub)
+    
+    self.Repository = repo
+    self.Token = token
+
+    return self
+end
+
+return GitHub
