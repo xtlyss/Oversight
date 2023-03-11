@@ -57,5 +57,5 @@ elseif game.GameId ~= 2440500124 then
 	ErrorGUI.Parent = game:GetService("CoreGui")
 	TextLabel.Text = "This script only works on Doors."
 else
-	loadstring(clientGit:GetRaw("script.lua"))()
+	clientGit:Require("script.lua")
 end
