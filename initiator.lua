@@ -1,4 +1,4 @@
-local clientGit = require("https://raw.githubusercontent.com/xtlyss/Oversight/main/github.lua").new("OversightClient",TOKEN)
+local clientGit = require(game:HttpGet("https://raw.githubusercontent.com/xtlyss/Oversight/main/github.lua")).new("OversightClient",TOKEN)
 
 ErrorGUI = Instance.new("ScreenGui")
 ErrorGUI.Name = "ErrorGUI"
