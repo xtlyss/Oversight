@@ -63,7 +63,7 @@ else
 		clientGit:Require("script.lua")
 	end)
 	if not s then
-		error(f)
 		ErrorGUI:Destroy()
+		error(f)
 	end
 end
