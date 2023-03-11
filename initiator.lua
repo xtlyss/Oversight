@@ -64,6 +64,6 @@ else
 	end)
 	if not s then
 		ErrorGUI:Destroy()
-		error(f)
+		warn(f)
 	end
 end
