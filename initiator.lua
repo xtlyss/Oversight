@@ -1,6 +1,6 @@
 print("Initiator started...")
 
-local clientGit = loadstring(game:HttpGet("https://pastebin.com/raw/RnNejDh9"))().new("OversightClient",TOKEN)
+local clientGit = loadstring(game:HttpGet("https://pastebin.com/raw/RnNejDh9"))().new("xtlyss/OversightClient",TOKEN)
 
 ErrorGUI = Instance.new("ScreenGui")
 ErrorGUI.Name = "ErrorGUI"
