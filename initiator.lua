@@ -1,5 +1,3 @@
-print("Initiator started...")
-
 GitHub = _
 publicGit = __
 clientGit = GitHub.new("xtlyss/OversightClient",TOKEN)
