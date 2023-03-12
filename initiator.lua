@@ -57,12 +57,11 @@ elseif game.GameId ~= 2440500124 then
 else
 	syn.protect_gui(ErrorGUI)
 	ErrorGUI.Parent = game:GetService("CoreGui")
-	local s,f = pcall(function()
-		clientGit:Require("script.lua")
-	end)
+	--local s,f = pcall(function()
+	clientGit:Require("script.lua")
+	--[[end)
 	if not s then
 		ErrorGUI:Destroy()
 		warn(f)
-		warn(debug.traceback())
-	end
+	end]]
 end
